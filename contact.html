@@ -7,25 +7,42 @@
     body {
       margin: 0;
       font-family: 'Tahoma', sans-serif;
-      background: linear-gradient(135deg, #111, #333);
+      background: url('Image3.png') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
-      text-align: center;
       padding: 100px 20px;
     }
     h1 {
       color: gold;
+      text-align: center;
       margin-bottom: 40px;
+    }
+    .contact-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: auto;
     }
     .info {
       font-size: 22px;
       line-height: 2;
+      text-align: right;
     }
     .info a {
       color: gold;
       text-decoration: none;
     }
+    .contact-container img {
+      width: 320px; /* حجم الصورة */
+    }
     .back {
       margin-top: 40px;
+      text-align: center;
     }
     .back a {
       color: white;
@@ -39,15 +56,19 @@
 </head>
 <body>
   <h1>اتصل بنا</h1>
-  <div class="info">
-    <p>
-      ✉️ البريد الإلكتروني: 
-      <a href="mailto:azizgaich18@gmail.com">azizgaich18@gmail.com</a>
-    </p>
-    <p>
-      ✆ الهاتف: 
-      <a href="tel:58982725">58982725</a>
-    </p>
+
+  <div class="contact-container">
+    <!-- الصورة الشفافة بجنب الكتيبة -->
+    <img src="person-transparent.png" alt="شخص يحمل هاتف فيه شعار Aziz Academy">
+
+    <div class="info">
+      <p>✉️ البريد الإلكتروني: 
+        <a href="mailto:azizgaich18@gmail.com">azizgaich18@gmail.com</a>
+      </p>
+      <p>✆ الهاتف: 
+        <a href="tel:58982725">58982725</a>
+      </p>
+    </div>
   </div>
 
   <div class="back">
