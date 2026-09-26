@@ -3,124 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Aziz Academy</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Tahoma', sans-serif;
-      background: #111;
-      color: #fff;
-    }
-    header {
-      background: rgba(0,0,0,0.8);
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header .logo {
-      color: gold;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: gold;
-    }
-    .hero {
-      background: url('stethoscope.png') no-repeat center center fixed;
-      background-size: cover;
-      text-align: center;
-      padding: 120px 20px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      color: gold;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .hero p {
-      font-size: 22px;
-      margin: 20px 0;
-    }
-    .btn {
-      background: gold;
-      color: black;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: white;
-      color: gold;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .services .service-box {
-      display: inline-block;
-      background: rgba(255,255,255,0.1);
-      margin: 20px;
-      padding: 30px;
-      border-radius: 10px;
-      font-size: 20px;
-      transition: transform 0.3s;
-    }
-    .services .service-box:hover {
-      transform: scale(1.1);
-      background: rgba(255,215,0,0.2);
-    }
-    .contact-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      background-color: rgba(0,0,0,0.6);
-      padding: 40px;
-      border-radius: 12px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .contact-container img {
-      width: 340px;
-      background: none;
-    }
-    .info {
-      font-size: 22px;
-      line-height: 2;
-      text-align: right;
-    }
-    .info a {
-      color: gold;
-      text-decoration: none;
-    }
-    .social a {
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 24px;
-      color: gold;
-    }
-    footer {
-      background: rgba(0,0,0,0.9);
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- الهيدر -->
@@ -128,32 +11,71 @@
     <div class="logo">Aziz Academy</div>
     <nav>
       <ul>
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html">عن الأكاديمية</a></li>
-        <li><a href="services.html">الخدمات</a></li>
-        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="#hero">الرئيسية</a></li>
+        <li><a href="#about">عن الأكاديمية</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#testimonials">آراء الطلبة</a></li>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+        <li><a href="#gallery">المعرض</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- البانر -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <h1>التعليم الطبي في متناول يدك</h1>
     <p>منصة حديثة تجمع بين الأكاديميا والطب</p>
     <a href="app-download.html" class="btn">📱 حمّل التطبيق</a>
   </section>
 
-  <!-- قسم الخدمات -->
-  <section class="services">
-    <h2>خدماتنا</h2>
+  <!-- التعريف -->
+  <section id="about" class="about">
+    <h1>عن Aziz Academy</h1>
+    <p>أكاديمية عزيز هي منصة تعليمية حديثة تجمع بين الطب والعلم، وتوفّر موارد رقمية ودروس تفاعلية للطلبة.</p>
+    <p>هدفنا هو تسهيل الوصول إلى المعرفة الطبية والأكاديمية عبر الهاتف والويب.</p>
+  </section>
+
+  <!-- الخدمات -->
+  <section id="services" class="services">
+    <h1>خدماتنا</h1>
     <div class="service-box">📘 دروس تفاعلية</div>
     <div class="service-box">🧪 موارد طبية</div>
     <div class="service-box">🎓 امتحانات تدريبية</div>
   </section>
 
-  <!-- قسم الاتصال -->
-  <section class="contact">
-    <h2>اتصل بنا</h2>
+  <!-- آراء الطلبة -->
+  <section id="testimonials" class="testimonials">
+    <h1>آراء الطلبة</h1>
+    <blockquote>“Aziz Academy غيّرت طريقة دراستي، كل شيء متاح بسهولة.”</blockquote>
+    <blockquote>“الدروس التفاعلية ساعدتني نفهم أكثر في الطب.”</blockquote>
+    <blockquote>“منصة حديثة وسهلة الاستعمال.”</blockquote>
+  </section>
+
+  <!-- الأسئلة الشائعة -->
+  <section id="faq" class="faq">
+    <h1>الأسئلة الشائعة</h1>
+    <h3>كيف أسجّل في Aziz Academy؟</h3>
+    <p>يمكنك التسجيل عبر الموقع أو تحميل التطبيق.</p>
+    <h3>هل الموارد مجانية؟</h3>
+    <p>نوفّر موارد مجانية وأخرى مدفوعة حسب الحاجة.</p>
+    <h3>هل يمكن الوصول عبر الهاتف؟</h3>
+    <p>نعم، كل الموارد متاحة عبر التطبيق.</p>
+  </section>
+
+  <!-- المعرض -->
+  <section id="gallery" class="gallery">
+    <h1>معرض الصور</h1>
+    <div class="gallery-grid">
+      <img src="Image2.png" alt="درس طبي">
+      <img src="Image3.png" alt="محاضرة أكاديمية">
+      <img src="Image3.jpg" alt="طلبة يدرسون">
+    </div>
+  </section>
+
+  <!-- الاتصال -->
+  <section id="contact" class="contact">
+    <h1>اتصل بنا</h1>
     <div class="contact-container">
       <img src="Image3.png" alt="شخص يحمل هاتف فيه شعار Aziz Academy">
       <div class="info">
