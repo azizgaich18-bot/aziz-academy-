@@ -1,0 +1,108 @@
+/* ====== GLASSMORPHISM ====== */
+.glass-box {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 30px;
+  transition: 0.3s;
+}
+.glass-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+
+/* ====== NEON BORDERS ====== */
+.neon-border {
+  border: 2px solid gold;
+  box-shadow: 0 0 10px gold, 0 0 20px gold;
+  transition: 0.3s;
+}
+.neon-border:hover {
+  box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700;
+}
+
+/* ====== 3D ROTATION CARDS ====== */
+.card-3d {
+  perspective: 1000px;
+}
+.card-3d-inner {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card-3d:hover .card-3d-inner {
+  transform: rotateY(180deg);
+}
+.card-3d-front, .card-3d-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card-3d-back {
+  transform: rotateY(180deg);
+}
+
+/* ====== WAVE TEXT ====== */
+.wave-text span {
+  display: inline-block;
+  animation: waveAnim 1.5s infinite;
+}
+.wave-text span:nth-child(2) { animation-delay: 0.1s; }
+.wave-text span:nth-child(3) { animation-delay: 0.2s; }
+.wave-text span:nth-child(4) { animation-delay: 0.3s; }
+@keyframes waveAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ====== SCROLL REVEAL ====== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== GRADIENT BACKGROUND ANIMATION ====== */
+.bg-gradient {
+  background: linear-gradient(135deg, #0a1f44, #111);
+  background-size: 200% 200%;
+  animation: gradientShift 6s infinite alternate;
+}
+@keyframes gradientShift {
+  from { background-position: left top; }
+  to { background-position: right bottom; }
+}
+
+/* ====== SHIMMER EFFECT ====== */
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,215,0,0.2) 25%, rgba(255,255,255,0.1) 50%, rgba(255,215,0,0.2) 75%);
+  background-size: 200% 100%;
+  animation: shimmerMove 2s infinite;
+}
+@keyframes shimmerMove {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+/* ====== MARQUEE TEXT ====== */
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marqueeMove 15s linear infinite;
+}
+@keyframes marqueeMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* ====== PULSE ICONS ====== */
+.icon-pulse
