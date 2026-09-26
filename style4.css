@@ -1,0 +1,90 @@
+/* ====== PARALLAX SECTIONS ====== */
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+}
+.parallax-section::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+/* ====== GLOW ANIMATION ====== */
+.glow-anim {
+  animation: glowAnim 2s infinite alternate;
+}
+@keyframes glowAnim {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 30px gold; }
+}
+
+/* ====== FLIP CARDS ====== */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: rgba(255,215,0,0.1);
+  color: gold;
+}
+
+/* ====== GRADIENT BORDERS ====== */
+.gradient-border {
+  border: 4px solid;
+  border-image: linear-gradient(45deg, gold, white) 1;
+  transition: 0.3s;
+}
+.gradient-border:hover {
+  border-image: linear-gradient(45deg, white, gold) 1;
+}
+
+/* ====== WAVE BACKGROUND ====== */
+.wave-background {
+  background: linear-gradient(135deg, #111, #222);
+  position: relative;
+  overflow: hidden;
+}
+.wave-background::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,215,0,0.2) 20%, transparent 70%);
+  animation: waveBackgroundAnim 10s infinite linear;
+}
+@keyframes waveBackgroundAnim {
+  from { transform: translateX(-50%) translateY(-50%); }
+  to { transform: translateX(50%) translateY(50%); }
+}
+
+/* ====== RESPONSIVE VARIANTS ====== */
+@media (max-width: 1200px) {
+  .hero h1 { font-size: 48px; }
+  .service-box { padding: 35px; }
+}
+@media (max-width: 992
