@@ -2,27 +2,87 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>اتصل بنا - Aziz Academy</title>
+  <title>Aziz Academy</title>
   <style>
     body {
       margin: 0;
       font-family: 'Tahoma', sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      color: gold;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: gold;
+    }
+    .hero {
       background: url('stethoscope.png') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      padding: 80px 20px;
+      text-align: center;
+      padding: 120px 20px;
     }
-    h1 {
+    .hero h1 {
+      font-size: 48px;
       color: gold;
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 40px;
+      animation: fadeIn 2s ease-in-out;
     }
-    .slogan {
-      text-align: center;
+    .hero p {
       font-size: 22px;
-      color: #fff;
-      margin-bottom: 40px;
+      margin: 20px 0;
+    }
+    .btn {
+      background: gold;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: white;
+      color: gold;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .services .service-box {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      margin: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+    .services .service-box:hover {
+      transform: scale(1.1);
+      background: rgba(255,215,0,0.2);
     }
     .contact-container {
       display: flex;
@@ -35,6 +95,10 @@
       max-width: 1100px;
       margin: auto;
     }
+    .contact-container img {
+      width: 340px;
+      background: none;
+    }
     .info {
       font-size: 22px;
       line-height: 2;
@@ -43,21 +107,6 @@
     .info a {
       color: gold;
       text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-container img {
-      width: 340px;
-      background: none; /* بدون خلفية */
-    }
-    .highlight {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 20px;
-      color: gold;
-    }
-    .social {
-      text-align: center;
-      margin-top: 30px;
     }
     .social a {
       margin: 0 10px;
@@ -65,70 +114,63 @@
       font-size: 24px;
       color: gold;
     }
-    .download {
+    footer {
+      background: rgba(0,0,0,0.9);
+      padding: 20px;
       text-align: center;
-      margin-top: 30px;
-    }
-    .download a {
-      color: white;
-      background-color: gold;
-      padding: 12px 24px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      font-size: 18px;
-    }
-    .back {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .back a {
-      color: white;
-      background-color: gold;
-      padding: 12px 24px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      font-size: 18px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <h1>اتصل بنا</h1>
-  <div class="slogan">Aziz Academy – التعليم الطبي في متناول يدك</div>
+  <!-- الهيدر -->
+  <header>
+    <div class="logo">Aziz Academy</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الأكاديمية</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="contact-container">
-    <!-- صورة الشخص بالهاتف شفافة -->
-    <img src="Image3.png" alt="شخص يحمل هاتف فيه شعار Aziz Academy">
+  <!-- البانر -->
+  <section class="hero">
+    <h1>التعليم الطبي في متناول يدك</h1>
+    <p>منصة حديثة تجمع بين الأكاديميا والطب</p>
+    <a href="app-download.html" class="btn">📱 حمّل التطبيق</a>
+  </section>
 
-    <div class="info">
-      <p>✉️ البريد الإلكتروني: 
-        <a href="mailto:azizgaich18@gmail.com">azizgaich18@gmail.com</a>
-      </p>
-      <p>✆ الهاتف: 
-        <a href="tel:58982725">58982725</a>
-      </p>
+  <!-- قسم الخدمات -->
+  <section class="services">
+    <h2>خدماتنا</h2>
+    <div class="service-box">📘 دروس تفاعلية</div>
+    <div class="service-box">🧪 موارد طبية</div>
+    <div class="service-box">🎓 امتحانات تدريبية</div>
+  </section>
+
+  <!-- قسم الاتصال -->
+  <section class="contact">
+    <h2>اتصل بنا</h2>
+    <div class="contact-container">
+      <img src="Image3.png" alt="شخص يحمل هاتف فيه شعار Aziz Academy">
+      <div class="info">
+        <p>✉️ البريد الإلكتروني: <a href="mailto:azizgaich18@gmail.com">azizgaich18@gmail.com</a></p>
+        <p>✆ الهاتف: <a href="tel:58982725">58982725</a></p>
+      </div>
     </div>
-  </div>
+    <div class="social">
+      <a href="https://facebook.com">🌐 فيسبوك</a>
+      <a href="https://instagram.com">📸 إنستغرام</a>
+      <a href="https://wa.me/58982725">💬 واتساب</a>
+    </div>
+  </section>
 
-  <div class="highlight">
-    جميع الموارد الأكاديمية والطبية متوفرة الآن عبر هاتفك
-  </div>
-
-  <!-- قسم شبكات التواصل الاجتماعي -->
-  <div class="social">
-    <a href="https://facebook.com" target="_blank">🌐 فيسبوك</a>
-    <a href="https://instagram.com" target="_blank">📸 إنستغرام</a>
-    <a href="https://wa.me/58982725" target="_blank">💬 واتساب</a>
-  </div>
-
-  <!-- زر تحميل التطبيق -->
-  <div class="download">
-    <a href="app-download.html">📱 حمّل تطبيق Aziz Academy</a>
-  </div>
-
-  <div class="back">
-    <a href="index.html">رجوع للصفحة الرئيسية</a>
-  </div>
+  <!-- الفوتر -->
+  <footer>
+    <p>© 2026 Aziz Academy - جميع الحقوق محفوظة</p>
+  </footer>
 </body>
 </html>
