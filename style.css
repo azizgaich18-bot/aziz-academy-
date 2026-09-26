@@ -1,13 +1,18 @@
-/* إعدادات عامة */
-body {
+/* ====== RESET & BASE ====== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Tahoma', sans-serif;
   background-color: #111;
   color: #fff;
   line-height: 1.8;
+  scroll-behavior: smooth;
 }
 
-/* الهيدر */
+/* ====== HEADER ====== */
 header {
   background: rgba(0,0,0,0.85);
   padding: 20px 40px;
@@ -17,12 +22,17 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  animation: slideDown 1.2s ease-out;
 }
 header .logo {
   color: gold;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 2px;
+  transition: transform 0.3s;
+}
+header .logo:hover {
+  transform: scale(1.1);
 }
 nav ul {
   list-style: none;
@@ -38,23 +48,27 @@ nav a {
 nav a:hover {
   color: gold;
   text-shadow: 0 0 10px gold;
+  transform: translateY(-3px);
 }
 
-/* البانر */
+/* ====== HERO ====== */
 .hero {
   background: url('stethoscope.png') no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   padding: 140px 20px;
+  animation: fadeIn 2s ease-in-out;
 }
 .hero h1 {
   font-size: 52px;
   color: gold;
-  animation: fadeIn 2s ease-in-out;
+  animation: glowText 3s infinite alternate;
 }
 .hero p {
   font-size: 24px;
   margin: 20px 0;
+  opacity: 0;
+  animation: fadeInUp 2s forwards 1s;
 }
 .btn {
   background: gold;
@@ -64,24 +78,37 @@ nav a:hover {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255,215,0,0.5);
 }
 .btn:hover {
   background: white;
   color: gold;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px gold;
 }
 
-/* أقسام عامة */
+/* ====== SECTIONS ====== */
 section {
   padding: 80px 20px;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 section h1, section h2 {
   color: gold;
   margin-bottom: 30px;
+  position: relative;
+}
+section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: gold;
+  margin: 10px auto;
+  animation: expandLine 2s infinite alternate;
 }
 
-/* الخدمات */
+/* ====== SERVICES ====== */
 .services .service-box {
   display: inline-block;
   background: rgba(255,255,255,0.1);
@@ -90,6 +117,7 @@ section h1, section h2 {
   border-radius: 12px;
   font-size: 22px;
   transition: transform 0.3s, background 0.3s;
+  animation: floatBox 4s infinite ease-in-out;
 }
 .services .service-box:hover {
   transform: translateY(-10px);
@@ -97,7 +125,7 @@ section h1, section h2 {
   box-shadow: 0 0 20px gold;
 }
 
-/* الشهادات */
+/* ====== TESTIMONIALS ====== */
 .testimonials blockquote {
   background: rgba(255,255,255,0.1);
   margin: 20px auto;
@@ -105,18 +133,26 @@ section h1, section h2 {
   border-left: 5px solid gold;
   max-width: 700px;
   font-style: italic;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
-/* الأسئلة الشائعة */
+/* ====== FAQ ====== */
 .faq h3 {
   color: gold;
   margin-top: 20px;
+  transition: color 0.3s;
+}
+.faq h3:hover {
+  color: white;
+  text-shadow: 0 0 10px gold;
 }
 .faq p {
   margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
 }
 
-/* المعرض */
+/* ====== GALLERY ====== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -125,14 +161,14 @@ section h1, section h2 {
 .gallery-grid img {
   width: 100%;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .gallery-grid img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px gold;
 }
 
-/* الاتصال */
+/* ====== CONTACT ====== */
 .contact-container {
   display: flex;
   align-items: center;
@@ -143,10 +179,15 @@ section h1, section h2 {
   border-radius: 12px;
   max-width: 1100px;
   margin: auto;
+  animation: fadeInUp 2s ease-in-out;
 }
 .contact-container img {
   width: 340px;
   background: none;
+  transition: transform 0.3s;
+}
+.contact-container img:hover {
+  transform: scale(1.05);
 }
 .info {
   font-size: 22px;
@@ -172,17 +213,75 @@ section h1, section h2 {
   text-shadow: 0 0 10px gold;
 }
 
-/* الفوتر */
+/* ====== FOOTER ====== */
 footer {
   background: rgba(0,0,0,0.9);
   padding: 20px;
   text-align: center;
   color: #aaa;
   font-size: 14px;
+  animation: fadeIn 2s ease-in-out;
 }
 
-/* أنيميشن */
+/* ====== ANIMATIONS ====== */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes glowText {
+  from {text-shadow: 0 0 10px gold;}
+  to {text-shadow: 0 0 30px gold;}
+}
+@keyframes expandLine {
+  from {width: 40px;}
+  to {width: 80px;}
+}
+@keyframes floatBox {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-5px);}
+}
+@keyframes slideDown {
+  from {transform: translateY(-100%);}
+  to {transform: translateY(0);}
+}
+
+/* ====== EXTRA EFFECTS ====== */
+.text-glow {
+  animation: textGlow 3s infinite alternate;
+}
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px gold; }
+  to { text-shadow: 0 0 30px gold; color: #ffd700; }
+}
+.img-zoom {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+.img-zoom:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px gold;
+}
+.bg-gradient {
+  background: linear-gradient(135deg, #0a1f44, #111);
+  background-size: 200% 200%;
+  animation: gradientShift 6s infinite alternate;
+}
+@keyframes gradientShift {
+  from { background-position: left top; }
+  to { background-position: right bottom; }
+}
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,215,0,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(255,215,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,215,0,0); }
+}
+.rotate-icon:hover {
+  transform: rotate(360deg);
+  transition: transform 1s ease-in-out;
 }
