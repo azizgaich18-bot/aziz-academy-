@@ -1,0 +1,106 @@
+/* ====== SPIN ANIMATION ====== */
+.spin {
+  animation: spinAnim 4s infinite linear;
+}
+@keyframes spinAnim {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ====== FLIP ANIMATION ====== */
+.flip {
+  animation: flipAnim 2s infinite;
+}
+@keyframes flipAnim {
+  0% { transform: rotateY(0); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* ====== PULSE BACKGROUND ====== */
+.bg-pulse {
+  animation: bgPulse 3s infinite;
+}
+@keyframes bgPulse {
+  0% { background-color: #111; }
+  50% { background-color: #222; }
+  100% { background-color: #111; }
+}
+
+/* ====== SLIDE IN ====== */
+.slide-in {
+  animation: slideInAnim 1.5s ease forwards;
+}
+@keyframes slideInAnim {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ====== BUTTON VARIANTS ====== */
+.btn-style1 {
+  background: gold;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-style1:hover {
+  background: white;
+  color: gold;
+}
+.btn-style2 {
+  background: transparent;
+  border: 2px solid gold;
+  color: gold;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-style2:hover {
+  background: gold;
+  color: black;
+}
+.btn-style3 {
+  background: linear-gradient(90deg, gold, white);
+  color: black;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-style3:hover {
+  transform: scale(1.1);
+}
+
+/* ====== CARD VARIANTS ====== */
+.card-style1 {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.card-style1:hover {
+  box-shadow: 0 0 20px gold;
+}
+.card-style2 {
+  background: rgba(255,215,0,0.1);
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.card-style2:hover {
+  transform: translateY(-10px);
+}
+.card-style3 {
+  background: linear-gradient(135deg, #111, #222);
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.card-style3:hover {
+  transform: scale(1.05);
+}
+
+/* ====== RESPONSIVE FINAL ====== */
+@media (max-width: 1200px) {
+  .hero h1 { font-size:
