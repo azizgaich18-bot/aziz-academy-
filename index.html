@@ -2,91 +2,82 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aziz Academy</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- ربط ملفات التنسيقات -->
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="style5.css">
 </head>
 <body>
+
   <!-- الهيدر -->
   <header>
     <div class="logo">Aziz Academy</div>
     <nav>
       <ul>
         <li><a href="#hero">الرئيسية</a></li>
-        <li><a href="#about">عن الأكاديمية</a></li>
         <li><a href="#services">الخدمات</a></li>
-        <li><a href="#testimonials">آراء الطلبة</a></li>
-        <li><a href="#faq">الأسئلة الشائعة</a></li>
         <li><a href="#gallery">المعرض</a></li>
+        <li><a href="#course">الكورسات</a></li>
         <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
+    </ul>
     </nav>
   </header>
 
   <!-- البانر -->
-  <section id="hero" class="hero">
-    <h1>التعليم الطبي في متناول يدك</h1>
-    <p>منصة حديثة تجمع بين الأكاديميا والطب</p>
-    <a href="app-download.html" class="btn">📱 حمّل التطبيق</a>
-  </section>
-
-  <!-- التعريف -->
-  <section id="about" class="about">
-    <h1>عن Aziz Academy</h1>
-    <p>أكاديمية عزيز هي منصة تعليمية حديثة تجمع بين الطب والعلم، وتوفّر موارد رقمية ودروس تفاعلية للطلبة.</p>
-    <p>هدفنا هو تسهيل الوصول إلى المعرفة الطبية والأكاديمية عبر الهاتف والويب.</p>
+  <section id="hero" class="hero bg-gradient">
+    <h1 class="text-glow">مرحبا بك في Aziz Academy</h1>
+    <p class="fade-slide">أسس قوية اليوم، نتائج متميزة غدا.</p>
+    <a href="#course" class="btn btn-pulse">ابدأ الآن 🚀</a>
   </section>
 
   <!-- الخدمات -->
   <section id="services" class="services">
-    <h1>خدماتنا</h1>
-    <div class="service-box">📘 دروس تفاعلية</div>
-    <div class="service-box">🧪 موارد طبية</div>
-    <div class="service-box">🎓 امتحانات تدريبية</div>
-  </section>
-
-  <!-- آراء الطلبة -->
-  <section id="testimonials" class="testimonials">
-    <h1>آراء الطلبة</h1>
-    <blockquote>“Aziz Academy غيّرت طريقة دراستي، كل شيء متاح بسهولة.”</blockquote>
-    <blockquote>“الدروس التفاعلية ساعدتني نفهم أكثر في الطب.”</blockquote>
-    <blockquote>“منصة حديثة وسهلة الاستعمال.”</blockquote>
-  </section>
-
-  <!-- الأسئلة الشائعة -->
-  <section id="faq" class="faq">
-    <h1>الأسئلة الشائعة</h1>
-    <h3>كيف أسجّل في Aziz Academy؟</h3>
-    <p>يمكنك التسجيل عبر الموقع أو تحميل التطبيق.</p>
-    <h3>هل الموارد مجانية؟</h3>
-    <p>نوفّر موارد مجانية وأخرى مدفوعة حسب الحاجة.</p>
-    <h3>هل يمكن الوصول عبر الهاتف؟</h3>
-    <p>نعم، كل الموارد متاحة عبر التطبيق.</p>
+    <h1>الخدمات</h1>
+    <div class="service-box glow-border">دروس فيديو واضحة</div>
+    <div class="service-box neon-border">اختبارات منتظمة</div>
+    <div class="service-box glass-box">تتبع الأداء</div>
   </section>
 
   <!-- المعرض -->
   <section id="gallery" class="gallery">
-    <h1>معرض الصور</h1>
+    <h1>المعرض</h1>
     <div class="gallery-grid">
-      <img src="Image2.png" alt="درس طبي">
-      <img src="Image3.png" alt="محاضرة أكاديمية">
-      <img src="Image3.jpg" alt="طلبة يدرسون">
+      <img src="Image2.png" alt="درس طبي" class="img-zoom">
+      <img src="Image3.jpg" alt="محاضرة أكاديمية" class="img-zoom">
+      <img src="Image3.png" alt="طالب يحمل هاتف" class="img-zoom">
+    </div>
+  </section>
+
+  <!-- الكورس -->
+  <section id="course" class="course parallax-section">
+    <h1 class="gradient-text">Foundation 10th Complete Course</h1>
+    <p class="text-shimmer">Concept Clarity | Complete Syllabus | Regular Tests</p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">📘 محتوى الكورس</div>
+        <div class="flip-card-back">🎓 أساتذة خبراء</div>
+      </div>
     </div>
   </section>
 
   <!-- الاتصال -->
   <section id="contact" class="contact">
     <h1>اتصل بنا</h1>
-    <div class="contact-container">
-      <img src="Image3.png" alt="شخص يحمل هاتف فيه شعار Aziz Academy">
+    <div class="contact-container glass-box">
+      <img src="Image3.png" alt="شخص يحمل هاتف">
       <div class="info">
-        <p>✉️ البريد الإلكتروني: <a href="mailto:azizgaich18@gmail.com">azizgaich18@gmail.com</a></p>
-        <p>✆ الهاتف: <a href="tel:58982725">58982725</a></p>
+        <p>📧 البريد: info@azizacademy.com</p>
+        <p>📞 الهاتف: +216 99 999 999</p>
+        <div class="social">
+          <a href="#">🌐 Facebook</a>
+          <a href="#">📸 Instagram</a>
+          <a href="#">🎥 YouTube</a>
+        </div>
       </div>
-    </div>
-    <div class="social">
-      <a href="https://facebook.com">🌐 فيسبوك</a>
-      <a href="https://instagram.com">📸 إنستغرام</a>
-      <a href="https://wa.me/58982725">💬 واتساب</a>
     </div>
   </section>
 
@@ -94,5 +85,6 @@
   <footer>
     <p>© 2026 Aziz Academy - جميع الحقوق محفوظة</p>
   </footer>
+
 </body>
 </html>
